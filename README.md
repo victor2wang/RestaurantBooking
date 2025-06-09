@@ -18,11 +18,13 @@ the sample JSON body request :
 
 3. lookup the bookings by the specific date :
    http://localhost:8080/bookings/queryByDate?bookedDate=2025-06-09 GET request
-   Restayrant owner can use it to lookup the booking by the defined date
+   with which the Restaurant owner can lookup the bookings by the date
 
 
    the System persists the bookings in the cache memory.
 
-   The APIs are documented by swagger, to have access to swagger for the APIs, go to the URL https://petstore.swagger.io/ , and explore the URL http://localhost:8080/openapi.json (such as I started the server from my local.
+   The APIs are documented by swagger, to have access to swagger for the APIs,
+   go to the URL https://petstore.swagger.io/ ,
+   and explore the URL http://localhost:8080/openapi.json, asuming you run the application on your localhost.
    
 
