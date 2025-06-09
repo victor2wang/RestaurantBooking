@@ -12,12 +12,12 @@ the sample JSON body request :
     "restaurantName" :"Barbeque Grill"
 }
 
-2. lookup the booking by customer Phone#:
+2. lookup the bookings by customer Phone#:
     http://localhost:8080/bookings/4163012361   GET Request
 
 
 3. lookup the bookings by the specific date :
-   http://localhost:8080/bookings/queryByDate?bookedDate=2025-06-09 GET request
+   http://localhost:8080/bookings/queryByDate?bookedDate=2025-06-09 GET request,
    with which the Restaurant owner can lookup the bookings by the date
 
 
