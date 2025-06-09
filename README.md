@@ -26,5 +26,10 @@ the sample JSON body request :
    The APIs are documented by swagger, to have access to swagger for the APIs,
    go to the URL https://petstore.swagger.io/ ,
    and explore the URL http://localhost:8080/openapi.json, asuming you run the application on your localhost.
+
+   To test the APIs, just start the application with the command:
+
+   $start.sh
+   
    
 
