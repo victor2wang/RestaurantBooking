@@ -1,6 +1,8 @@
 package com.exercise.application;
 
 import com.exercise.restaurant.controller.BookingController;
+import com.exercise.restaurant.controller.UserController;
+import com.exercise.restaurant.filter.JwtAuthFilter;
 import com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider;
 import io.muserver.Method;
 import io.muserver.MuServer;
@@ -26,7 +28,8 @@ public class BookingApp {
                     .addHandler(Method.GET, "/", (request, response, pathParams) -> {
                         response.write("Welcome to the Restaurant Booking System!");
                     })
-                    .addHandler(RestHandlerBuilder.restHandler(new BookingController())
+                    .addHandler(RestHandlerBuilder.restHandler(new BookingController(),new UserController())
+                            .addRequestFilter(new JwtAuthFilter())
                             .addCustomReader(jacksonJsonProvider)
                             .addCustomWriter(jacksonJsonProvider)
                             .withOpenApiJsonUrl("/openapi.json")
